@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
  public class Sorts {
   public static void selectionSort(int[] ary) {
     for (int i = 0; i < ary.length; i++) {
@@ -6,10 +8,11 @@
         if (ary[j] < ary[min]) {
           min = j;
         }
-        int temp = ary[min];
-        ary[min] = ary[j];
-        ary[j] = temp;
       }
+      System.out.println(Arrays.toString(ary));
+      int temp = ary[min];
+      ary[min] = ary[i];
+      ary[i] = temp;
     }
   }
 
