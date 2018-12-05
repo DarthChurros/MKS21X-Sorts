@@ -9,7 +9,7 @@ import java.util.Arrays;
           min = j;
         }
       }
-      System.out.println(Arrays.toString(ary));
+      //System.out.println(Arrays.toString(ary));
       int temp = ary[min];
       ary[min] = ary[i];
       ary[i] = temp;
