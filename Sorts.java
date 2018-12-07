@@ -37,7 +37,7 @@ import java.util.Arrays;
     for (int i = 0; i < size; i++) {
       arr[i] = (int)(Math.random() * size - size / 2);
     }
-    if (args.length > 1 && args[2].equals("display"))
+    if (args.length > 2 && args[2].equals("display"))
       System.out.println("unsorted: " + Arrays.toString(arr));
     switch (args[1]) {
       case "selection":
