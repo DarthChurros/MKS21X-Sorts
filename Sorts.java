@@ -48,7 +48,7 @@ import java.util.Arrays;
         break;
       default: System.exit(1);
     }
-    if (args[3].equals("display"))
+    if (args.length > 2 && args[2].equals("display"))
       System.out.println("sorted: " + Arrays.toString(arr));
   }
 }
