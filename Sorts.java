@@ -25,7 +25,7 @@ import java.util.Arrays;
           int temp = ary[i];
           ary[i] = ary[i+1];
           ary[i+1] = temp;
-          run = false;
+          run = true;
         }
       }
     }
@@ -35,7 +35,7 @@ import java.util.Arrays;
     int size = Integer.parseInt(args[0]);
     int[] arr = new int[size];
     for (int i = 0; i < size; i++) {
-      arr[i] = (int)(Math.random() * size - size / 2);
+      arr[i] = (int)(Math.random() * size * 4 - size * 2);
     }
     if (args.length > 2 && args[2].equals("display"))
       System.out.println("unsorted: " + Arrays.toString(arr));
