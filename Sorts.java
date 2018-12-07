@@ -32,12 +32,14 @@ import java.util.Arrays;
   }
 
   public static void main(String[] args) {
-    int[] arr = new int[7];
-    for (int i = 0; i < 7; i++) {
-      arr[i] = (int)(Math.random() * 30 - 15);
+    int size = Integer.parseInt(args[0]);
+    int[] arr = new int[size];
+    for (int i = 0; i < size; i++) {
+      arr[i] = (int)(Math.random() * size - size / 2);
     }
-    System.out.println("unsorted: " + Arrays.toString(arr));
-    switch (args[0]) {
+    if (args[3].equals("display"))
+      System.out.println("unsorted: " + Arrays.toString(arr));
+    switch (args[1]) {
       case "selection":
         selectionSort(arr);
         break;
@@ -46,6 +48,7 @@ import java.util.Arrays;
         break;
       default: System.exit(1);
     }
-    System.out.println("sorted: " + Arrays.toString(arr));
+    if (args[3].equals("display"))
+      System.out.println("sorted: " + Arrays.toString(arr));
   }
 }
