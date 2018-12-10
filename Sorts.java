@@ -2,15 +2,17 @@ import java.util.Arrays;
 
  public class Sorts {
   public static void selectionSort(int[] ary) {
+    int min;
+    int temp;
     for (int i = 0; i < ary.length; i++) {
-    int min = i;
+    min = i;
       for (int j = i + 1; j < ary.length; j++) {
         if (ary[j] < ary[min]) {
           min = j;
         }
       }
       //System.out.println(Arrays.toString(ary));
-      int temp = ary[min];
+      temp = ary[min];
       ary[min] = ary[i];
       ary[i] = temp;
     }
@@ -18,16 +20,19 @@ import java.util.Arrays;
 
   public static void bubbleSort(int[] ary) {
     boolean run = true;
+    int done = 1;
+    int temp;
     while (run) {
       run = false;
-      for (int i = 0; i < ary.length - 1; i++) {
+      for (int i = 0; i < ary.length - done; i++) {
         if (ary[i] > ary[i+1]) {
-          int temp = ary[i];
+          temp = ary[i];
           ary[i] = ary[i+1];
           ary[i+1] = temp;
           run = true;
         }
       }
+      done++;
     }
   }
 
