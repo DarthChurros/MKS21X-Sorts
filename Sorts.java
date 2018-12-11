@@ -37,8 +37,7 @@ import java.util.Arrays;
   }
 
   public static void insertionSort(int[] ary) {
-    int temp;
-    int j;
+    int temp, j;
     for (int i = 1; i < ary.length; i++) {
       temp = ary[i];
       j = i - 1;
