@@ -43,9 +43,9 @@ import java.util.Arrays;
       j = i - 1;
       while (j >= 0 && ary[j] > temp) {
         ary[j+1] = ary[j];
-        ary[j] = temp;
         j--;
       }
+      ary[j+1] = temp;
     }
   }
 
