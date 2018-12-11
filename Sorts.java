@@ -38,15 +38,14 @@ import java.util.Arrays;
 
   public static void insertionSort(int[] ary) {
     int temp;
+    int j;
     for (int i = 1; i < ary.length; i++) {
-      for (int j = 0; j < i; j++) {
-        if (ary[i] < ary[j]) {
-          temp = ary[i];
-          for (int k = i; k > j; k--) {
-            ary[k] = ary[k-1];
-          }
-          ary[j] = temp;
-        }
+      temp = ary[i];
+      j = i - 1;
+      while (j >= 0 && ary[j] > temp) {
+        ary[j+1] = ary[j];
+        ary[j] = temp;
+        j--;
       }
     }
   }
